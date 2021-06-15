@@ -31,6 +31,7 @@ public class HomeFragment extends Fragment {
 
     RecyclerView recyclerview;
     LinearLayoutManager layoutManager;
+    CarAdapter carAdapter;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -38,8 +39,10 @@ public class HomeFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         layoutManager= new LinearLayoutManager(getContext());
+        carAdapter = new CarAdapter();
         recyclerview= root.findViewById(R.id.carsViewList);
         recyclerview.setLayoutManager(layoutManager);
+        recyclerview.setAdapter(carAdapter);
         return root;
     }
 }
