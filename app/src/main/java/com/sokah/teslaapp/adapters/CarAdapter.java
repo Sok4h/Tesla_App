@@ -1,5 +1,6 @@
 package com.sokah.teslaapp.adapters;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,8 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
-import com.sokah.teslaapp.fragments.CarFragment;
-import com.sokah.teslaapp.fragments.HomeFragment;
+import com.sokah.teslaapp.activities.CarActivity;
 import com.sokah.teslaapp.model.CarView;
 import com.sokah.teslaapp.R;
 import com.sokah.teslaapp.model.Car;
@@ -27,11 +27,8 @@ public class CarAdapter extends RecyclerView.Adapter<CarView> {
 
     private ArrayList<Car> carArrayList;
     private ViewGroup group;
-    private CarFragment carFragment;
-
     public CarAdapter() {
 
-        carFragment = CarFragment.newInstance();
         carArrayList = new ArrayList<>();
         carArrayList.add(new Car(UUID.randomUUID().toString(),"Roadster","4 years","https://mychiptuningfiles.com/es/image/models/YEdPJDTEJGtIpmJUdcezezZIfZtG5p.png"
         ,10,20,3,100));
@@ -44,9 +41,6 @@ public class CarAdapter extends RecyclerView.Adapter<CarView> {
         carArrayList.add(new Car(UUID.randomUUID().toString(),"Roadster","4 years","https://mychiptuningfiles.com/es/image/models/YEdPJDTEJGtIpmJUdcezezZIfZtG5p.png"
                 ,10,20,6,10));
     }
-
-
-
 
     public void AddCar(Car car) {
 
@@ -77,16 +71,10 @@ public class CarAdapter extends RecyclerView.Adapter<CarView> {
         });
         holder.getRoot().setOnClickListener(v->{
             Gson gson= new Gson();
-            AppCompatActivity activity = (AppCompatActivity) v.getContext();
-            FragmentManager fragmentManager = activity.getSupportFragmentManager();
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
-
             String car =gson.toJson(carArrayList.get(position));
-            Bundle bundle = new Bundle();
-            bundle.putString("car", car);
-            carFragment.setArguments(bundle);
-            transaction.replace(R.id.fragmentContainer, carFragment);
-            transaction.commit();
+            Intent intent = new Intent(v.getContext(), CarActivity.class);
+            intent.putExtra("car", car);
+            v.getContext().startActivity(intent);
 
         });
         Glide.with(group.getContext())
