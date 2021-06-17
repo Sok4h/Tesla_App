@@ -1,10 +1,13 @@
-package com.sokah.teslaapp;
+package com.sokah.teslaapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.sokah.teslaapp.R;
+import com.sokah.teslaapp.activities.MainActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

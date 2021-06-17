@@ -1,4 +1,4 @@
-package com.sokah.teslaapp;
+package com.sokah.teslaapp.fragments;
 
 import android.os.Bundle;
 
@@ -9,6 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.sokah.teslaapp.R;
+import com.sokah.teslaapp.adapters.CarAdapter;
 
 
 public class HomeFragment extends Fragment {

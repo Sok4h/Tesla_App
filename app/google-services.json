@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "229014067115",
+    "project_id": "tesla-app-2354c",
+    "storage_bucket": "tesla-app-2354c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229014067115:android:1ca1e7f7918a87f97024ee",
+        "android_client_info": {
+          "package_name": "com.sokah.teslaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229014067115-t60td1qofbmfht7hdbm68c572l1qve5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuyi4fZMvaR6PvHXwyWtabiEFqzaCb3HI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229014067115-t60td1qofbmfht7hdbm68c572l1qve5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.sokah.teslaapp;
+package com.sokah.teslaapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.sokah.teslaapp.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 

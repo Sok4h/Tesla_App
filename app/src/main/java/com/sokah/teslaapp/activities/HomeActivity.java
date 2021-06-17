@@ -1,4 +1,4 @@
-package com.sokah.teslaapp;
+package com.sokah.teslaapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -8,6 +8,9 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.sokah.teslaapp.fragments.HomeFragment;
+import com.sokah.teslaapp.fragments.ProfileFragment;
+import com.sokah.teslaapp.R;
 
 public class HomeActivity extends AppCompatActivity {
 

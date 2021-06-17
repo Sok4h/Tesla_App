@@ -1,4 +1,4 @@
-package com.sokah.teslaapp;
+ package com.sokah.teslaapp.model;
 
 
 import android.widget.Button;
@@ -8,9 +8,10 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.sokah.teslaapp.R;
 
 
-public class CarView extends RecyclerView.ViewHolder {
+ public class CarView extends RecyclerView.ViewHolder {
 
     private ConstraintLayout root;
     private TextView tvCarName,tvCarWaranty,tvCarPrice;

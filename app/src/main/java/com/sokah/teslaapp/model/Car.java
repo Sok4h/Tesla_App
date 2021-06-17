@@ -1,21 +1,23 @@
-package com.sokah.teslaapp;
+package com.sokah.teslaapp.model;
 
 public class Car {
 
     private String id,name,waranty,imgUrl;
-    private float price,weight;
+    private int price,weight,aceleration,speed;
 
     public Car(){
 
 
     }
-    public Car(String id,String name, String waranty, String imgUrl, float price, float weight) {
+    public Car(String id,String name, String waranty, String imgUrl, int price, int weight,int aceleration,int speed) {
         this.id = id;
         this.name = name;
         this.waranty = waranty;
         this.imgUrl = imgUrl;
         this.price = price;
         this.weight = weight;
+        this.aceleration = aceleration;
+        this.speed = speed;
     }
 
     public String getId() {
@@ -54,15 +56,31 @@ public class Car {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
-    public float getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(float weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public int getAceleration() {
+        return aceleration;
+    }
+
+    public void setAceleration(int aceleration) {
+        this.aceleration = aceleration;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 }
